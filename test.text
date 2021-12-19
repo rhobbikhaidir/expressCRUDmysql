@@ -1,0 +1,5 @@
+    <% post.forEach(res => { %> <% const handleClick = () => { %> <%
+    console.log(res.id) %> <% } %>
+    <p><%= res.title %></p>
+    <button>test</button>
+    <% }) %>

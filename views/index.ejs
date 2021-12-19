@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- <header>
+      <a class="header-logo">LIST</a>
+    </header> -->
+    <div class="container">
+      <div class="container-header">
+        <h1>Daftar Belanjaan</h1>
+        <a href="/new" class="new-button">+ Tambahkan</a>
+      </div>
+      <div class="index-table-wrapper">
+        <div class="table-head">
+          <span class="id-column">ID</span>
+          <span>Item</span>
+        </div>
+        <ul class="table-body">
+          <% data.forEach(res => { %>
+          <li>
+            <div class="item-data">
+              <span class="id-column"><%= res.id %></span>
+              <span class="name-column"><%= res.barang%></span>
+            </div>
+            <div class="item-menu">
+              <form action="/delete/<%= res.id %>" method="post">
+                <input type="submit" value="Delete" />
+              </form>
+            </div>
+          </li>
+          <% }) %>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
